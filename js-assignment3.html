@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Heighest Name Length</title>
+		<style>
+			body{
+				width: 340px;
+				margin: auto;
+				background-color: #c3c3c3;
+			}
+			.full-sec{
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h2 style="color: black; text-align: center;">Assignment-2</h2>
+		<div class="full-sec">
+			<h3 style="background-color: #395692; color: #fff; padding: 15px 0; text-align: center;">Largest Name in Facebook Friendlist</h3>
+			<div style=" width: 320px; margin: auto; height: 280px;" class="bill-sec">
+				
+				<script>
+					var friendName1 = prompt("Enter your friend name 1");
+					var firendName2 = prompt("Enter your friend name 2");
+					var friendName3 = prompt("Enter your friend name 3");
+					var frindlist = [friendName1, firendName2, friendName3];
+					
+					document.write("<p>Facebook Friendlist: "+friendName1+", "+firendName2+", "+friendName3+"</p><hr>")
+					function nameLenght(funName){
+						var greater = 0;
+						var g;
+						for(var i = 0; i < funName.length; i++){
+							if(funName[i].length>greater){
+								g = funName[i];
+								greater = funName[i].length;
+							}
+						}
+						document.write("<h4>Lenght of Largest Name : " + greater + "</h4>");
+						return g;
+					}
+					var grtName = nameLenght(frindlist);
+					document.write("<h4>Largest Name : " + grtName + "</h4>");
+				</script>
+			</div>
+		</div>
+		<p style="background-color: #395692; color: #fff; padding: 5px 0; text-align: center; margin: 0;">Thanks for connect with me</p>
+	</body>
+</html>

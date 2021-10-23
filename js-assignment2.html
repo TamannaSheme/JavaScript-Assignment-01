@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Restaurent Discount </title>
+		<style>
+			body{
+				width: 340px;
+				margin: auto;
+				background-color: #c3c3c3;
+			}
+			.full-sec{
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 style="color: black; text-align: center;">Assignment-3</h2>
+		<div class="full-sec">
+			<h2 style="background-color: #208380; color: #fff; padding: 15px 0; text-align: center;">Honeymoon Hotel Cost</h2>
+			<div style=" width: 320px; margin: auto; height: 220px;" class="bill-sec">
+				<script>
+
+					var dayOffStay = parseInt(prompt("Day of Stay"));
+					function totalDays (days) {
+						if (days<=10){
+							var discountless = days*100;
+							document.write("Your Total Cost: "+discountless+" Tk" + "<br>");
+							document.write("Total Stay: "+days + " Days<br>");
+							document.write("<br>Sorry to say that we don't offer discounts😔");
+						}
+						else if (days>=11 && days<=20){
+							var after10 =  ((days-10)*100);
+							var dis = ((after10*20)/100);
+						 	var discount20 = after10 - dis;
+							var beforeDis = 10*100;
+							var totalCost = discount20+beforeDis;
+							document.write("Your Total Cost: "+totalCost+" Tk" + "<br>");
+							document.write("Total Stay: "+days + " Days<br>");
+							document.write("<br><br><br><br>1 to 10 days cost: "+beforeDis+ " TK<br>");
+							document.write("11 to "+days+" days cost after 20% discount: "+discount20+ " TK<br>");
+						}
+						else{
+							var after20 =  ((days-20)*100);
+							var dis = ((after20*50)/100);
+						 	var discount50 = after20 - dis;
+							var beforeDis = 10*100;
+							var disAfter10 = 10*80;
+							var totalCost = discount50+beforeDis+disAfter10;
+							document.write("Your Total Cost: "+totalCost+" Tk" + "<br>");
+							document.write("Total Stay: "+days + " Days<br>");
+							document.write("<br><br><br>1 to 10 days cost: "+beforeDis+ " Tk<br>");
+							document.write("11 to 20 days cost after 20% discount: "+disAfter10+ " Tk<br>")
+							document.write("21 to "+days+" days cost after 50% discount: "+discount50+ " Tk<br>")
+						}
+					}
+					
+					totalDays(dayOffStay);
+				</script>
+			</div>
+		</div>
+		<p style="background-color: #208380; color: #fff; padding: 5px 0; text-align: center; margin: 0;">Thank you for choosing to stay with us</p>
+	</body>
+</html>

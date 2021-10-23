@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shopping List</title>
+	<style>
+		body{
+			width: 340px;
+			margin: auto;
+			background-color: #c3c3c3;
+		}
+		.full-sec{
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>		
+	<h2 style="color: black; text-align: center;">Assignment-1</h2>
+	<div class="full-sec">
+		<h3 style="background-color: #da5b15; color: #fff; padding: 15px 0; text-align: center;">Girlfriend Shopping List and Budget</h3>
+		<div style=" width: 320px; margin: auto; height: 220px;" class="bill-sec">
+	<script>
+		var laptopCost = parseInt(prompt("Laptop Price"));
+		var mobileCost =  parseInt(prompt("Mobile Price"));
+		var watchCost =  parseInt(prompt("Watch Price"));
+
+		function shopping(laptop,mobile,watch){
+			var list = laptop + mobile + watch;
+			document.write("<h4>Laptop Price: "+laptop+"</h4>");
+			document.write("<h4>Mobile Price: "+mobile+"</h4>");
+			document.write("<h4>Watch Price: "+watch+"</h4>");
+			return list;
+		}
+	var sum = shopping(laptopCost, mobileCost, watchCost);
+	document.write("<h2>Total Cost: "+sum+"</h2>");
+	</script>
+				</div>
+			</div>
+			<p style="background-color: #da5b15; color: #fff; padding: 5px 0; text-align: center; margin: 0;">Thanks for shopping from our store</p>
+</body>
+</html>
